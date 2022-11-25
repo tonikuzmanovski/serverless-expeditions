@@ -10,7 +10,7 @@ else
   echo $STOP
 fi
 
-if [[ $STOP = "true" ]]
+if [ $STOP = "true" ]
 then
   # Disable autoscaling
   gcloud container clusters update $GKE \
@@ -41,7 +41,7 @@ then
     echo "Scaling GKE nodepool to 0 finished with error: $RESULT"
     exit 1
   fi
-elif [[ $STOP = "false" ]]
+elif [ $STOP = "false" ]
 then
   # Enable autoscaling
   gcloud container clusters update $GKE \
