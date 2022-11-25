@@ -1,9 +1,9 @@
-GOOGLE_PROJECT_ID=[YOUR GOOGLE PROJECT ID]
+GOOGLE_PROJECT_ID=medical-portal-dev-ro
 
 gcloud run deploy \
-  --source . \
   --project $GOOGLE_PROJECT_ID \
   --platform managed \
-  --region us-central1 \
-  --allow-unauthenticated \
+  --region europe-west3 \
+  --image europe-west4-docker.pkg.dev/h4h-global/general/shell-test:latest
+  --no-allow-unauthenticated \
   my-shell-script
