@@ -1,6 +1,6 @@
 # Most of this file comes from https://cloud.google.com/run/docs/quickstarts/build-and-deploy/shell
 # The installation of the gcloud command-line tool has been added.
-FROM golang:1.14-buster as builder
+FROM golang:1.19-buster as builder
 WORKDIR /app
 COPY go.* ./
 RUN go mod download
