@@ -21,8 +21,9 @@ then
 
   # Print script results
   RESULT=$?
-  if [ $RESULT -eq 0 ]; then
-  echo "--------------Disabling GKE autoscaling finished sucesfully---------------"
+  if [ $RESULT -eq 0 ]
+  then
+    echo "--------------Disabling GKE autoscaling finished sucesfully---------------"
   else
     echo "Disabling GKE autoscaling finished with error: $RESULT"
     exit 1
@@ -35,8 +36,9 @@ then
       --project=$PROJECT
 
   # Print script results
-  if [ $RESULT -eq 0 ]; then
-  echo "--------------Scaling GKE nodepool to 0 finished sucesfully---------------"
+  if [ $RESULT -eq 0 ]
+  then
+    echo "--------------Scaling GKE nodepool to 0 finished sucesfully---------------"
   else
     echo "Scaling GKE nodepool to 0 finished with error: $RESULT"
     exit 1
@@ -53,8 +55,9 @@ then
       
   # Print script results
   RESULT=$?
-  if [ $RESULT -eq 0 ]; then
-  echo "--------------Disabling GKE autoscaling finished sucesfully---------------"
+  if [ $RESULT -eq 0 ]
+  then
+    echo "--------------Disabling GKE autoscaling finished sucesfully---------------"
   else
     echo "Disabling GKE autoscaling finished with error: $RESULT"
     exit 1
