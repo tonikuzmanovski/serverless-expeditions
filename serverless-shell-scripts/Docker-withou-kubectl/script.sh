@@ -12,9 +12,6 @@ fi
 
 if [ $STOP = "true" ]
 then
-  gcloud config set project $PROJECT
-  gcloud container clusters get-credentials $GKE --zone $ZONE --project $PROJECT
-  kubectl get cronjobs
   # Disable autoscaling
   gcloud container clusters update $GKE \
       --no-enable-autoscaling \
